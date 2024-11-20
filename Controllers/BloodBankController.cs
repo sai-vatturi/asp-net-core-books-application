@@ -137,9 +137,9 @@ namespace BloodBankAPI.Controllers
         // GET: api/bloodbank/search
         [HttpGet("search")]
         public IActionResult Search(
-            [FromQuery] string bloodType = null,
-            [FromQuery] string status = null,
-            [FromQuery] string donorName = null,
+            [FromQuery] string? bloodType = null,
+            [FromQuery] string? status = null,
+            [FromQuery] string? donorName = null,
             [FromQuery] int? minQuantity = null,
             [FromQuery] int? maxQuantity = null)
         {
