@@ -9,7 +9,7 @@ This section contains a variety of tests performed on the Blood Bank Management 
 
 ### 1. **Create a New Blood Entry**
 - **Endpoint**: `POST /api/bloodbank`
-- **Input**:
+- **Sample Payload**:
   ```json
   {
     "donorName": "Neha Sharma",
@@ -22,41 +22,21 @@ This section contains a variety of tests performed on the Blood Bank Management 
     "status": "Available"
   }
   ```
-- **Expected Output**:
-  - HTTP Status Code: `201 Created`
-  - Response body with the newly created entry and `Id`.
-
-**Screenshot Placeholder**:
-![Swagger POST Create Entry](./screenshots/swagger-post-create-entry.png)
+<img width="472" alt=" POST" src="https://github.com/user-attachments/assets/be9269af-caad-43e6-a664-4d41ff3c10e7">
 
 ---
 
 ### 2. **Retrieve All Entries (Pagination)**
-- **Endpoint**: `GET /api/bloodbank`
-- **Query Parameters**:
-  - `page=1`
-  - `size=5`
-  - `sortBy=age`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - Paginated list of entries sorted by `age`.
 
-**Screenshot Placeholder**:
-![Swagger GET All Entries with Pagination](./screenshots/swagger-get-pagination.png)
+<img width="464" alt="GET" src="https://github.com/user-attachments/assets/8f82da50-93c3-4849-a7f6-b0d3c4f2a323">
+
 
 ---
 
 ### 3. **Search by Multiple Filters**
-- **Endpoint**: `GET /api/bloodbank/search`
-- **Query Parameters**:
-  - `bloodType=O+`
-  - `status=Available`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - List of entries matching `bloodType=O+` and `status=Available`.
 
-**Screenshot Placeholder**:
-![Swagger GET Search by Filters](./screenshots/swagger-get-search-filters.png)
+<img width="470" alt="GET_Search" src="https://github.com/user-attachments/assets/674a120d-3975-440d-a327-704d410f6983">
+
 
 ---
 
@@ -75,35 +55,16 @@ This section contains a variety of tests performed on the Blood Bank Management 
     "status": "Requested"
   }
   ```
-- **Expected Output**:
-  - HTTP Status Code: `204 No Content`
 
-**Screenshot Placeholder**:
-![Swagger PUT Update Entry](./screenshots/swagger-put-update-entry.png)
+<img width="474" alt="PUT" src="https://github.com/user-attachments/assets/db07a547-0e1a-4b54-bf6f-7668cc59461d">
 
----
-
-### 5. **Retrieve Entry by Status**
-- **Endpoint**: `GET /api/bloodbank/search`
-- **Query Parameter**:
-  - `status=Requested`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - List of entries with `status=Requested`.
-
-**Screenshot Placeholder**:
-![Swagger GET Search by Status](./screenshots/swagger-get-search-status.png)
 
 ---
 
 ### 6. **Delete an Entry**
-- **Endpoint**: `DELETE /api/bloodbank/{id}`
-- **Input**: Replace `{id}` with an entry's `Id`.
-- **Expected Output**:
-  - HTTP Status Code: `204 No Content`.
 
-**Screenshot Placeholder**:
-![Swagger DELETE Entry](./screenshots/swagger-delete-entry.png)
+<img width="470" alt="DELETE" src="https://github.com/user-attachments/assets/73352083-983f-4fc9-b60f-123afffed3d7">
+
 
 ---
 
@@ -124,86 +85,31 @@ This section contains a variety of tests performed on the Blood Bank Management 
     "status": "Available"
   }
   ```
-- **Expected Output**:
-  - HTTP Status Code: `201 Created`
-  - Response body with the newly created entry and `Id`.
 
-**Screenshot Placeholder**:
-![Postman POST Create Entry](./screenshots/postman-post-create-entry.png)
+<img width="661" alt="POST " src="https://github.com/user-attachments/assets/8c28089c-8125-4d04-88d2-6ebf4fc8afd8">
+
 
 ---
 
-### 2. **Retrieve All Entries (Different Page)**
+### 2. **Retrieve All Entries (Different size)**
 - **Endpoint**: `GET /api/bloodbank`
-- **Query Parameters**:
-  - `page=2`
-  - `size=3`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - Paginated list of entries on page 2.
 
-**Screenshot Placeholder**:
-![Postman GET All Entries](./screenshots/postman-get-pagination.png)
+<img width="660" alt="GET" src="https://github.com/user-attachments/assets/92f5b9b9-8a00-427a-8761-440c0277a767">
+
 
 ---
 
 ### 3. **Search by Donor Name**
 - **Endpoint**: `GET /api/bloodbank/search`
-- **Query Parameter**:
-  - `donorName=Arjun`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - List of entries where `donorName` contains "Arjun".
-
-**Screenshot Placeholder**:
-![Postman GET Search by Donor Name](./screenshots/postman-get-search-donorname.png)
+<img width="670" alt="GET_Search" src="https://github.com/user-attachments/assets/cdbcaa03-2f09-4760-b1ac-b36fb2fb2c4e">
 
 ---
 
-### 4. **Retrieve Entry by Quantity Range**
-- **Endpoint**: `GET /api/bloodbank/search`
-- **Query Parameters**:
-  - `minQuantity=450`
-  - `maxQuantity=500`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - List of entries with `quantity` between 450 and 500.
-
-**Screenshot Placeholder**:
-![Postman GET Search by Quantity](./screenshots/postman-get-search-quantity.png)
-
----
 
 ### 5. **Retrieve All Entries Sorted by Collection Date**
-- **Endpoint**: `GET /api/bloodbank`
-- **Query Parameter**:
-  - `sortBy=collectionDate`
-- **Expected Output**:
-  - HTTP Status Code: `200 OK`
-  - List of entries sorted by `collectionDate`.
-
-**Screenshot Placeholder**:
-![Postman GET Sort by Collection Date](./screenshots/postman-get-sort-collectiondate.png)
+- **Endpoint**: `DELETE /api/id`
+<img width="660" alt="DELETE" src="https://github.com/user-attachments/assets/9ba4d79b-b97e-4265-bef9-b1250403c361">
 
 ---
 
-## **Summary of Tests**
-
-### **Swagger Screenshots**
-1. POST Create Entry
-2. GET All Entries (Pagination)
-3. GET Search by Multiple Filters
-4. PUT Update Entry
-5. GET Search by Status
-6. DELETE Entry
-
-### **Postman Screenshots**
-1. POST Create Another Entry
-2. GET All Entries (Page 2)
-3. GET Search by Donor Name
-4. GET Search by Quantity Range
-5. GET All Entries Sorted by Collection Date
-
----
-
-Save the screenshots in the `./screenshots/` directory as per the placeholders above. Let me know if further modifications are required.
+Look at the screenshots folder for more tests!
