@@ -113,12 +113,7 @@ Here’s some sample blood bank data used in the in-memory database:
 
 ## Screenshots and Tests
 
-Detailed testing of the api with screenshots are given in this markdown file: 
-
-
+Detailed testing of the api with screenshots are given in this markdown file link: 
+[Detailed testing of the API with screenshots](https://github.com/sai-vatturi/blood-bank-management-netcore-webapi/blob/main/Screenshots/Comprehensive_API_Tests.md)
 
 ---
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
